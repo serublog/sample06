@@ -1,0 +1,451 @@
+@charset "UTF-8";
+/*==================================================================
+# 設定
+================================================================= */
+/* 色
+-------------------------------------------------------------*/
+/* レイアウト値
+-------------------------------------------------------------*/
+/* 階層
+-------------------------------------------------------------*/
+/* ブレークポイント
+-------------------------------------------------------------*/
+/* メディアクエリー
+-------------------------------------------------------------*/
+/*==================================================================
+# 初期化
+================================================================= */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Noto Sans', 'Noto Sans JP','sans-serif';
+  font-size: 1.44rem;
+  color: #383E45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  height: auto;
+  border: none;
+}
+
+/*==================================================================
+#  補完クラス
+================================================================= */
+/* PCだけ非表示
+-------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+  .hidden-pc {
+    display: none;
+  }
+}
+
+/*タブレットだけ非表示 
+-------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+  .hidden-md {
+    display: none;
+  }
+}
+
+/*スマホだけ非表示 
+-------------------------------------------------------------*/
+@media screen and (max-width: 767px) {
+  .hidden-sm {
+    display: none;
+  }
+}
+
+/* 共通クラス
+-------------------------------------------------------------*/
+.wrapper {
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 0 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    padding: 0 16px;
+  }
+}
+
+.section {
+  padding-bottom: 170px;
+}
+
+.util-title {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 7.2rem;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: 2;
+  -webkit-filter: drop-shadow(1px 1px 2px #121212);
+          filter: drop-shadow(1px 1px 2px #121212);
+}
+
+@media screen and (max-width: 767px) {
+  .util-title {
+    font-size: 3.2rem;
+  }
+}
+
+.section-title {
+  text-align: center;
+}
+
+.section-title a {
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 70px;
+  padding-bottom: 7px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+}
+
+@media screen and (max-width: 767px) {
+  .section-title a {
+    font-size: 2rem;
+  }
+}
+
+.section-title a::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: #E03131;
+}
+
+/*==================================================================
+# header
+================================================================= */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 10;
+}
+
+.header-nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.header-nav-item + .header-nav-item {
+  margin-left: 30px;
+}
+
+.header-nav-item-link {
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 1px 1px 2px #121212;
+}
+
+.header-nav-item-link:hover {
+  color: #E03131;
+}
+
+/*==================================================================
+# main
+================================================================= */
+/* mainvisual
+-------------------------------------------------------------*/
+.mainvisual {
+  position: relative;
+  content: '';
+  top: 0;
+  left: 0;
+  background: url(../img/mainvisual.jpg) no-repeat center center/cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.site-title {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 11.5rem;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-filter: drop-shadow(1px 1px 2px #121212);
+          filter: drop-shadow(1px 1px 2px #121212);
+}
+
+@media screen and (max-width: 767px) {
+  .site-title {
+    font-size: 8.4rem;
+  }
+}
+
+/* menu
+-------------------------------------------------------------*/
+.menu {
+  padding-top: 20px;
+}
+
+.menu-wrapper {
+  margin-top: 90px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.menu-img {
+  position: relative;
+  content: '';
+  top: 0;
+  left: 0;
+  background: url(../img/menu.jpg) no-repeat center center/cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 300px;
+}
+
+.menu-item {
+  width: 50%;
+  padding: 0 45px;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-item {
+    width: 100%;
+    padding: 0 16px;
+  }
+}
+
+.s-menu-item + .s-menu-item {
+  margin-top: 55px;
+}
+
+.menu-title a {
+  margin-bottom: 60px;
+}
+
+.menu-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu-list {
+  width: 83%;
+  margin: 0;
+}
+
+.menu-list li {
+  border-bottom: 1px dotted #000;
+  margin-bottom: 25px;
+}
+
+.menu-list li a {
+  color: #383E45;
+}
+
+.menu-coin {
+  width: 12%;
+}
+
+.menu-coin p {
+  margin-bottom: 28px;
+}
+
+/* about
+-------------------------------------------------------------*/
+.about-wrapper {
+  padding-top: 90px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.about-img {
+  position: relative;
+  content: '';
+  top: 0;
+  left: 0;
+  background: url(../img/about.jpg) no-repeat center center/cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 300px;
+}
+
+.about-item {
+  width: 50%;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .about-item {
+    width: 100%;
+  }
+}
+
+.about-item p {
+  padding-bottom: 40px;
+  line-height: 2;
+}
+
+.readmore {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.readmore a {
+  display: inline-block;
+  text-align: center;
+  padding: 17px 45px;
+  color: #383E45;
+  position: relative;
+}
+
+.readmore a::before {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  right: 0;
+  width: 35px;
+  height: 25px;
+  border-bottom: 1px solid #E03131;
+  border-right: 1px solid #E03131;
+}
+
+.readmore a::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 25px;
+  border-top: 1px solid #E03131;
+  border-left: 1px solid #E03131;
+}
+
+/* location
+-------------------------------------------------------------*/
+.location-wrapper {
+  margin-top: 90px;
+}
+
+.location-img {
+  position: relative;
+  content: '';
+  top: 0;
+  left: 0;
+  background: url(../img/location.jpg) no-repeat center center/cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 300px;
+}
+
+.location-map {
+  width: 100%;
+  padding-top: 41.28%;
+  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .location-map {
+    padding-top: 120%;
+  }
+}
+
+.location-map > iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.location-body {
+  margin-top: 20px;
+}
+
+.address {
+  line-height: 2;
+}
+
+.date {
+  line-height: 2;
+  margin-top: 10px;
+}
+
+.tel {
+  line-height: 2;
+  margin-top: 10px;
+}
+
+/*==================================================================
+# footer
+================================================================= */
+.footer {
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px;
+}
+/*# sourceMappingURL=style.css.map */
